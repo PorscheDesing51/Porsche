@@ -2,6 +2,7 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { ProductsSeed } from './seeds/products/products.seeds';
 import { config as dotenvConfig } from "dotenv";
+import { loggerGlobal } from './middleware/logger.middleware';
 
 dotenvConfig({
   path: ".env.development.local"
@@ -9,6 +10,7 @@ dotenvConfig({
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  app.use(loggerGlobal);
 
   const productsSeed = app.get(ProductsSeed);
   await productsSeed.createSeedProducts();
