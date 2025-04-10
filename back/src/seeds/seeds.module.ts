@@ -1,7 +1,7 @@
 import { Module } from "@nestjs/common";
 import { TypeOrmModule } from "@nestjs/typeorm";
 import { Product } from "src/products/entities/product.entity";
-import { ProductsSeed } from "./products.seeds";
+import { ProductsSeed } from "./products/products.seeds";
 
 @Module({
     imports: [TypeOrmModule.forFeature([
