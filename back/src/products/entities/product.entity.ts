@@ -20,6 +20,9 @@ export class Product {
     description: string;
 
     @Column()
+    image: string;
+
+    @Column()
     createdAt: Date;
 
     @Column()

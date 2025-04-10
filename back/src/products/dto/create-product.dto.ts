@@ -14,6 +14,9 @@ export class CreateProductDto {
     @IsString()
     description: string;
 
+    @IsString()
+    image: string;
+
     @IsDate()
     createdAt: Date;
 

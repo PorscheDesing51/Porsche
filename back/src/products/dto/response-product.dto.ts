@@ -16,6 +16,9 @@ export class ResponseProductDto {
     @IsString()
     description: string
 
+    @IsString()
+    image: string
+
     @IsDate()
     createdAt: Date
 
@@ -24,13 +27,14 @@ export class ResponseProductDto {
 
     constructor(parttial: Partial<ResponseProductDto>) {
 
-        const { id, name, model, price, description, createdAt, updatedAt } = parttial
+        const { id, name, model, price, description, image, createdAt, updatedAt } = parttial
 
         this.id = id
         this.name = name
         this.model = model
         this.price = price
         this.description = description
+        this.image = image
         this.createdAt = createdAt
         this.updatedAt = updatedAt
 

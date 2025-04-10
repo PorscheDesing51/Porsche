@@ -23,6 +23,7 @@ export class ProductsSeed {
                 newProduct.model = productData.model;
                 newProduct.price = productData.price;
                 newProduct.description = productData.description;
+                newProduct.image = productData.image;
                 newProduct.createdAt = productData.createdAt;
                 newProduct.updatedAt = productData.updatedAt;
 
